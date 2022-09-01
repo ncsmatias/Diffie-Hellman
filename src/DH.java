@@ -14,30 +14,7 @@ public class DH {
     }
 
     public long generatedSecretKey (long keyReceivedX) {
-        return (long) (Math.pow(keyReceivedX, this.privateKeyAlpha) % this.publicKeyP);
+        return (long) (Math.pow(keyReceivedX, this.privateKeyAlpha) % this.publicKeyP); // o calculo é feito a partir do resulta da chave publica elavada ao valor da chave privada modulo pela chave publica
     }
 
-    public long getPublicKeyP() {
-        return publicKeyP;
-    }
-
-    public void setPublicKeyP(long publicKeyP) {
-        this.publicKeyP = publicKeyP;
-    }
-
-    public long getPublicKeyG() {
-        return publicKeyG;
-    }
-
-    public void setPublicKeyG(long publicKeyG) {
-        this.publicKeyG = publicKeyG;
-    }
-
-    public long getPrivateKeyAlpha() {
-        return privateKeyAlpha;
-    }
-
-    public void setPrivateKeyAlpha(long privateKeyAlpha) {
-        this.privateKeyAlpha = privateKeyAlpha;
-    }
 }
